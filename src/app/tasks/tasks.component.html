@@ -1,0 +1,25 @@
+<h2>My Tasks</h2>
+ 
+<div>
+  <label>Task:
+    <input #text />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addTask(text.value); text.value=''">
+    add
+  </button>
+</div>
+<div class="task__list-wrapper">
+  <h1 class="task__list-tittle">TODO</h1>
+  <ul class="task__list">
+    <li class="task__list-element" *ngFor="let task of tasks">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="" />{{task.text}} </label>
+      </div>
+      <!--<button class="delete" title="delete hero"
+      (click)="delete(task)">x</button>-->
+    </li>
+  </ul>
+</div>
+ 
