@@ -1,24 +1,16 @@
 {
   "tasks": [
     {
-      "text": "Learn GrapQL",
-      "id": 8
+      "text": "e",
+      "id": 15235
     },
     {
-      "text": "Learn Block-chain/Hyperlayer",
-      "id": 2
+      "text": "sd",
+      "id": 15237
     },
     {
-      "text": "Create todo app in React",
-      "id": 3
-    },
-    {
-      "text": "Go to the gym",
-      "id": 4
-    },
-    {
-      "text": "Clean the bathroom",
-      "id": 9
+      "text": "react",
+      "id": 15238
     }
   ]
 }

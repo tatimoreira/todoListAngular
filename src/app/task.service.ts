@@ -23,12 +23,19 @@ export class TaskService {
     return this.http.get<Task[]>(this.tasksUrl)
   }
 
-  /** POST: add a new task to the server */
   addTask (task: Task): Observable<Task>{
     return this.http.post<Task>(this.tasksUrl, task, httpOptions).pipe(
-      catchError(this.handleError<Task>('addHero'))
+      catchError(this.handleError<Task>('addTask'))
     )
   }
+
+  deleteTask(taskId:number): Observable<Task>{
+    return this.http.delete<Task>(this.tasksUrl + "/"+ taskId, httpOptions).pipe(
+      catchError(this.handleError<Task>('deleteTask'))
+    )
+  }
+
+
 
   /**
    * Handle Http operation that failed.

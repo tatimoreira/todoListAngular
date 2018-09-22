@@ -32,6 +32,22 @@ export class TasksComponent implements OnInit {
     })
   }
 
+  deleteTask(task:Task) : void{
+    let taskId = task.id;
+    
+    var idx = this.tasks.indexOf(task); // 1
+    this.taskService.deleteTask(taskId)
+    .subscribe(task => {
+      if (idx !== -1) {
+        this.tasks.splice(idx, 1);
+      }
+    })
+  }
+
+  updateTask():void{
+
+  }
+
 
  
 }
