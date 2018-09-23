@@ -7,12 +7,14 @@ import { TasksComponent } from './tasks/tasks.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {HttpClientModule} from '@angular/common/http';
+import { TaskFormComponent } from './task-form/task-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent
+    TasksComponent,
+    TaskFormComponent
   ],
   imports: [
     BrowserModule,

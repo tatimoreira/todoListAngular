@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
-import {Task} from '../task';
+import { Task } from '../task';
 
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.css']
+  styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit {
 
-  tasks : Task[];
+  tasks: Task[];
 
   constructor(private taskService: TaskService) { }
 
@@ -20,34 +20,32 @@ export class TasksComponent implements OnInit {
 
   getTasks(): void {
     this.taskService.getTasks()
-    .subscribe(tasks => this.tasks = tasks);
+      .subscribe(tasks => this.tasks = tasks);
   }
 
-  addTask(text: string):void {
+  addTask(text: string): void {
     text = text.trim();
     if (!text) { return; }
-    this.taskService.addTask( {text} as Task)
-    .subscribe(task =>{
-      this.tasks.push(task);
-    })
+    this.taskService.addTask({ text } as Task)
+      .subscribe(task => {
+        this.tasks.push(task);
+      })
   }
 
-  deleteTask(task:Task) : void{
-    let taskId = task.id;
-    
-    var idx = this.tasks.indexOf(task); // 1
-    this.taskService.deleteTask(taskId)
+
+  deleteTodo(index, task) {
+    this.taskService.deleteTask(task.id)
     .subscribe(task => {
-      if (idx !== -1) {
-        this.tasks.splice(idx, 1);
-      }
+      this.tasks.splice(index, 1);
     })
-  }
-
-  updateTask():void{
-
+    
   }
 
 
- 
+  updateTask(): void {
+
+  }
+
+
+
 }

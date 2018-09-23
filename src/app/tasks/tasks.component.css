@@ -17,7 +17,6 @@ background-color: #FFF;
   padding: 0.25em 1em;
   margin: 0 1em 0.2em 0;
   background: transparent;
-  color: palevioletred;
   border: 2px solid palevioletred;
 }
 .task__list{
@@ -25,4 +24,27 @@ background-color: #FFF;
     margin: 0;
     padding: 0; 
 }
+.delete{
+    float: right;
+}
+ .done {
+    text-decoration: line-through;
+}
+
+.newTaskInput{
+    width: 514px;
+    height: 29px;
+    margin-right: 20px;
+    font-size: 1.4em;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+.form button{
+    height: 36px;
+    font-size: 1.1em;
+    vertical-align: top;
+    border: solid 1px #999;
+    border-radius: 2px;
+}
+
 

@@ -1,0 +1,8 @@
+<div>
+  <label>Task:
+    <input #text />
+  </label>
+  <button (click)="addTask(text.value); text.value=''">
+    add
+  </button>
+</div>
